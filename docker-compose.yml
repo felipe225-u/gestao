@@ -1,0 +1,9 @@
+
+services:
+  api:
+    build: /home/felipe/Documentos/imersao-devops-main
+    ports:
+      - "8001:8000"
+    volumes:
+      - /home/felipe/Documentos/imersao-devops-main:/app
+    command: uvicorn app:app --host 0.0.0.0 --port 8000 --reload
